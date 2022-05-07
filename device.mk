@@ -359,9 +359,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.2.vendor
+    android.hardware.power@1.3.vendor \
+    vendor.qti.hardware.perf@2.2.vendor \
+    android.hardware.power-service.xiaomi-libperfmgr
 
 # Preopted ODEX files (system_other)
 PRODUCT_PACKAGES += \
@@ -421,8 +421,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/bootctrl \
-    hardware/xiaomi
-
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/xiaomi  
+     
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
